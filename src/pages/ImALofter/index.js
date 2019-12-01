@@ -8,7 +8,9 @@ import {
   ButtonSend,
 } from './styles';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 EvilIcons.loadFont();
+Ionicons.loadFont();
 
 export class ImALofter extends Component {
   render() {
