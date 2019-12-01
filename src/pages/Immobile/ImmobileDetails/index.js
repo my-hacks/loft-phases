@@ -128,7 +128,7 @@ export class ImmobileDetails extends Component {
             </DefaultContainer>
 
             <ContainerCTA>
-              <BuyNow>
+              <BuyNow onPress={() => this.props.navigation.navigate('BuyNow')}>
                 <Text
                   style={{color: 'black', fontWeight: 'bold', fontSize: 16}}>
                   Comprar agora
