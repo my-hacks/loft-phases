@@ -17,12 +17,12 @@ const ImmobileView = createStackNavigator({
 const Routes = createAppContainer(
   createStackNavigator(
     {
-      ImALofter,
-      BuyNow,
       Calculator,
       ImmobileView,
       Maps,
       Login,
+      ImALofter,
+      BuyNow,
     },
     {
       headerMode: 'none',

@@ -134,7 +134,8 @@ export class ImmobileDetails extends Component {
                   Comprar agora
                 </Text>
               </BuyNow>
-              <ButtonLoft>
+              <ButtonLoft
+                onPress={() => this.props.navigation.navigate('ImALofter')}>
                 <Text
                   style={{color: 'orange', fontWeight: 'bold', fontSize: 16}}>
                   Plano Loft
