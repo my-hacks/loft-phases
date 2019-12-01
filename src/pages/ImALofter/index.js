@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, TouchableOpacity, Image, Alert} from 'react-native';
 import {
   DefaultContainer,
   DefaultSafeArea,
@@ -11,8 +11,17 @@ import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 EvilIcons.loadFont();
 Ionicons.loadFont();
+import Modal from 'react-native-modal';
 
 export class ImALofter extends Component {
+  state = {
+    isModalVisible: false,
+  };
+
+  toggleModal = () => {
+    this.setState({isModalVisible: !this.state.isModalVisible});
+  };
+
   render() {
     return (
       <DefaultSafeArea>
@@ -55,7 +64,7 @@ export class ImALofter extends Component {
             <Text>RG / CPF </Text>
           </DefaultContainer>
 
-          <ButtonSend>
+          <ButtonSend onPress={() => Alert.alert('Documentos Enviados')}>
             <Text
               style={{
                 color: 'orange',
