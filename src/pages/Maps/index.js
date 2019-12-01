@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import {DefaultSafeArea} from './styles';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Map
+import aptIcon from '../../assets/img/png-apt.png';
+import keys from '../../assets/img/keys.png';
 
 const styles = StyleSheet.create({
   container: {
@@ -44,8 +46,16 @@ export class Maps extends Component {
               onPress={e => {
                 e.stopPropagation();
                 navigate('ImmobileView');
-              }}
-            />
+              }}>
+              <Image
+                source={keys}
+                resizeMode="cover"
+                style={{
+                  height: 40,
+                  width: 40,
+                }}
+              />
+            </Marker>
           </MapView>
         </View>
       </DefaultSafeArea>

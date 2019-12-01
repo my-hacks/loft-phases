@@ -15,7 +15,6 @@ export const BoxImmobile = styled.View`
   height: 150px;
   width: 150px;
   border: 1px solid black;
-  background-color: orange;
   border-radius: 10px;
   margin-right: 10px;
 `;

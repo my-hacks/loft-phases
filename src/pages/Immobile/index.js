@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
-import {Text, View, Image, ScrollView} from 'react-native';
+import {Text, View, Image, ScrollView, TouchableOpacity} from 'react-native';
 import {Container, DefaultSafeArea, BoxImmobile} from './styles';
 import apt from '../../assets/img/apt-1.jpeg';
+import {Divider} from 'react-native-elements';
+import {withNavigation} from 'react-navigation';
 
 export class Immobile extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    const {navigate} = this.props.navigation;
     return (
       <DefaultSafeArea>
         <Container>
@@ -17,16 +23,22 @@ export class Immobile extends Component {
             }}>
             Mais procurados da Semana
           </Text>
-          <ScrollView horizontal>
+          <ScrollView
+            horizontal
+            contentContainerStyle={{
+              height: 220,
+            }}>
             <BoxImmobile>
-              <Image
-                source={apt}
-                resizeMode="cover"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
+              <TouchableOpacity onPress={() => navigate('ImmobileDetails')}>
+                <Image
+                  source={apt}
+                  resizeMode="cover"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                  }}
+                />
+              </TouchableOpacity>
               <Text>Teste</Text>
             </BoxImmobile>
 
@@ -41,54 +53,7 @@ export class Immobile extends Component {
               />
               <Text>Teste</Text>
             </BoxImmobile>
-
-            <BoxImmobile>
-              <Image
-                source={apt}
-                resizeMode="cover"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-              <Text>Teste</Text>
-            </BoxImmobile>
-
-            <BoxImmobile>
-              <Image
-                source={apt}
-                resizeMode="cover"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-              <Text>Teste</Text>
-            </BoxImmobile>
-
-            <BoxImmobile>
-              <Image
-                source={apt}
-                resizeMode="cover"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-              <Text>Teste</Text>
-            </BoxImmobile>
-
-            <BoxImmobile>
-              <Image
-                source={apt}
-                resizeMode="cover"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-              <Text>Teste</Text>
-            </BoxImmobile>
+            <Divider style={{backgroundColor: 'blue'}} />
           </ScrollView>
         </Container>
       </DefaultSafeArea>
@@ -96,4 +61,4 @@ export class Immobile extends Component {
   }
 }
 
-export default Immobile;
+export default withNavigation(Immobile);

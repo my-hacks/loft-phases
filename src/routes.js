@@ -5,8 +5,10 @@ import Login from './pages/Login';
 import Calculator from './pages/Calculator';
 import Maps from './pages/Maps';
 import Immobile from './pages/Immobile';
+import ImmobileDetails from './pages/Immobile/ImmobileDetails';
 
 const ImmobileView = createStackNavigator({
+  ImmobileDetails,
   Immobile,
 });
 
@@ -14,8 +16,8 @@ const Routes = createAppContainer(
   createStackNavigator(
     {
       ImmobileView,
-      Maps,
       Calculator,
+      Maps,
       Login,
     },
     {
