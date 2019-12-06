@@ -46,13 +46,16 @@ class Calculator extends Component {
   render() {
     let data = [
       {
-        value: 'Banana',
+        value: 'de 300.000,00 a 400.000,00',
       },
       {
-        value: 'Mango',
+        value: 'de 401.000,00 a 500.000,00',
       },
       {
-        value: 'Pear',
+        value: 'de 501.000,00 a 600.000,00',
+      },
+      {
+        value: 'Acima de 600.000,00',
       },
     ];
 

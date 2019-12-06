@@ -1,0 +1,9 @@
+module.exports = {
+  aparts: [
+    {
+      id: 1,
+      name: 'Brisbane Garden',
+      value: 'R$ 593.000,00',
+    }
+  ],
+};

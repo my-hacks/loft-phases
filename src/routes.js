@@ -8,6 +8,7 @@ import Immobile from './pages/Immobile';
 import ImmobileDetails from './pages/Immobile/ImmobileDetails';
 import BuyNow from './pages/BuyNow';
 import ImALofter from './pages/ImALofter';
+import Manegement from './pages/Management';
 
 const ImmobileView = createStackNavigator({
   Immobile,
@@ -18,11 +19,12 @@ const Routes = createAppContainer(
   createStackNavigator(
     {
       Calculator,
-      ImmobileView,
       Maps,
       Login,
+      ImmobileView,
       ImALofter,
       BuyNow,
+      Manegement,
     },
     {
       headerMode: 'none',

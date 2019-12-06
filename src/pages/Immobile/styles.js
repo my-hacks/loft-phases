@@ -8,7 +8,6 @@ export const DefaultSafeArea = styled.SafeAreaView`
 
 export const Container = styled.View`
   padding: ${metrics.basePadding}px;
-  flex: 1;
 `;
 
 export const BoxImmobile = styled.View`

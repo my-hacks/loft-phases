@@ -4,6 +4,8 @@ import {DefaultSafeArea} from './styles';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Map
 import aptIcon from '../../assets/img/png-apt.png';
 import keys from '../../assets/img/keys.png';
+import apartment from '../../assets/img/apartment.png';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const styles = StyleSheet.create({
   container: {
@@ -48,7 +50,7 @@ export class Maps extends Component {
                 navigate('ImmobileView');
               }}>
               <Image
-                source={keys}
+                source={apartment}
                 resizeMode="cover"
                 style={{
                   height: 40,
